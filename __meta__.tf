@@ -36,6 +36,7 @@ output "_" {
   value = aws_iam_role._
 }
 
-output "policy_arns" {
-  value = local.all_policy_arns
+# This is useful when you need to refer to the created policies
+output "policies" {
+  value = aws_iam_policy.from_document
 }
