@@ -5,7 +5,6 @@ A utility module that simplifies creating an IAM role with a trust policy with m
 ## Usage
 
 ```terraform
-# Task role
 data "aws_iam_policy_document" "example" {
   statement {
     sid    = "AutoScaling"
