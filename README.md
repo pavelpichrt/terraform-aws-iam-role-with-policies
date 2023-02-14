@@ -1,6 +1,6 @@
 # Terraform module: IAM Role with policies
 
-A utility module that simplifies creating an IAM role with a trust policy and one or more managed on inline policy documents.
+A utility module that simplifies creating an IAM role with a trust policy with multiple managed or custom attached policies.
 
 ## Usage
 
@@ -44,6 +44,7 @@ module "role_example" {
 output "created_role" {
   value = module.role_example._
 }
+
 
 output "created_policies" {
   value = module.role_example.policies

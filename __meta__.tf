@@ -9,9 +9,13 @@ terraform {
 
 # =============================================
 
-variable "name" {}
+variable "name" {
+  description = "Name of a role to be created."
+}
 
-variable "assume_role_policy" {}
+variable "assume_role_policy" {
+  description = "Can be provided for example via `data.aws_iam_policy_document.xxx.json` or HEREDOC syntax. See example."
+}
 
 variable "attach_policy_documents" {
   type        = list(string)
